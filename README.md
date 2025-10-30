@@ -1,16 +1,23 @@
-# falasp
+# Fala SP
 
-A new Flutter project.
+Denuncie pertubações de sossego
 
-## Getting Started
+## Sobre o aplicativo
 
-This project is a starting point for a Flutter application.
+O FalaSP é uma plataforma digital desenvolvida para dar visibilidade a problemas cotidianos relacionados à perturbação do sossego público. O objetivo é ampliar a consciência coletiva e fornecer dados que ajudem a sociedade a compreender melhor a dimensão desses problemas.
 
-A few resources to get you started if this is your first Flutter project:
+O app permite que qualquer cidadão registre situações de barulho excessivo em sua região. Outros moradores podem confirmar os relatos, e todos os registros alimentam um mapa público que mostra os locais mais afetados.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+A plataforma garante sigilo, dá transparência ao problema e fortalece a consciência coletiva sobre a perturbação do sossego, oferecendo informações que podem embasar o diálogo entre comunidade e autoridades.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 📲 Fluxo de uso
+
+1. Login via conta Google
+2. Visualização do mapa com denúncias em tempo real
+3. Caso o usuário esteja dentro do **raio de impacto** (calculado pelo servidor), é solicitado que ele participe da **validação colaborativa**:
+    - “O barulho ainda está acontecendo”
+    - “O barulho já acabou”
+    - “Não ouço nada daqui”
+4. O app também oferece o **modo ronda**, que acompanha a posição do usuário em tempo real e mantém a tela ativa, ideal para monitoramento contínuo.
+
+#### 🔐 Privacidade garantida: nenhuma denúncia ou validação é vinculada à identidade do usuário.
