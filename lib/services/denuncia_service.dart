@@ -22,7 +22,7 @@ class DenunciaService {
   getDenunciasByDistance(latitude, longitude) async {
     try {
       final response = await _db.functions.invoke(
-        'get-denuncias-by-distance', // Nome da sua Edge Function
+        'get-denuncias-by-distance', 
         body: jsonEncode({'user_lat': latitude, 'user_lng': longitude}),
       );
       if (response.data == null) {
@@ -49,9 +49,8 @@ class DenunciaService {
               .eq('id', idDenuncia)
               .single();
 
-      // Como não estamos trazendo id e expiresAt, podemos usar null/default
       return Denuncia(
-        id: idDenuncia, // opcional, já que você sabe qual id buscou
+        id: idDenuncia, 
         type: data['type'] as String,
         latitude: (data['latitude'] as num).toDouble(),
         longitude: (data['longitude'] as num).toDouble(),
