@@ -8,7 +8,7 @@ class UserLocationGlobal {
       UserLocationGlobal._privateConstructor();
   factory UserLocationGlobal() => _instance;
 
-  // Variáveis de localização como Signals
+  // Variáveis de localização
   final Signal<double?> latitude = Signal<double?>(null);
   final Signal<double?> longitude = Signal<double?>(null);
   final Signal<LatLng?> _latLng = Signal<LatLng?>(LatLng(0, 0));
