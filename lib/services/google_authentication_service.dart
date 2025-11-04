@@ -7,11 +7,10 @@ class GoogleAuthenticationService {
   // Configuração do GoogleSignIn (necessário apenas para MOBILE)
   Future<GoogleSignIn> _loginComCredenciais() async {
     if (kIsWeb) {
-      // Na web, o clientId NÃO é usado pelo google_sign_in se usarmos o Supabase OAuth
       var _login = GoogleSignIn(clientId: dotenv.env['WEB_CLIENT_ID']);
       return _login;
     } else {
-      // 📱 MOBILE: usa clientId + serverClientId
+      // 📱 MOBILE: 
       var _login = GoogleSignIn(
         clientId: dotenv.env['ANDROID_CLIENT_ID'],
         serverClientId: dotenv.env['WEB_CLIENT_ID'],
@@ -23,18 +22,17 @@ class GoogleAuthenticationService {
   loginComGoogle() async {
     try {
       if (kIsWeb) {
-        // 🌐 WEB FLOW: Usar o fluxo OAuth NATIVO e único do Supabase.
+        // 🌐 WEB FLOW
         final String redirectUrl = kDebugMode ? 'http://localhost:3000' : '';
 
         await Supabase.instance.client.auth.signInWithOAuth(
           OAuthProvider.google,
           redirectTo: redirectUrl.isNotEmpty ? redirectUrl : null,
         );
-        // O código não continua aqui; o app será recarregado após o redirecionamento.
         return;
       }
 
-      // --- FLUXO MOBILE (Não kIsWeb) ---
+      // --- FLUXO MOBILE  ---
       final GoogleSignIn _googleSignIn = await _loginComCredenciais();
       print('Usuário atual: ${_googleSignIn.currentUser}');
 
