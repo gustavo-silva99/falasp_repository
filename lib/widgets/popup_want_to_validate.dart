@@ -82,7 +82,7 @@ void showFloatingSnackbar(BuildContext context, Denuncia denuncia) {
               ),
             ),
 
-            // Ícone de megafone à direita
+            // Ícone à direita
             Image.asset('assets/icones/denuncia_marker.png', width: 40.0),
           ],
         ),
