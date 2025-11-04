@@ -6,7 +6,7 @@ class ButtonComponent extends StatefulWidget {
   final Color? backgroundColor;
   final Color? fontColor;
   final double? fontSize;
-  final Widget? iconeEsquerda; // agora aceita Icon OU Image.asset
+  final Widget? iconeEsquerda; // aceita Icon OU Image.asset
   final Widget? iconeDireita; // idem
   final VoidCallback? onPressed;
 
