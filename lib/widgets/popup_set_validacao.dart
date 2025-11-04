@@ -170,7 +170,7 @@ class _PopupSetValidacaoState extends State<PopupSetValidacao> {
                       '${widget.pessoasMarcaram} pessoas marcaram essa denúncia como verdadeira.',
                   style: const TextStyle(
                     fontSize: 14,
-                    color: Colors.black38, // importante definir cor no TextSpan
+                    color: Colors.black38, 
                   ),
                 ),
               ],
