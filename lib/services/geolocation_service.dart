@@ -31,9 +31,8 @@ class GeolocationService {
     } catch (err) {
       rethrow;
     }
-    // Usando LocationSettings (novo padrão)
     final settings = LocationSettings(
-      accuracy: LocationAccuracy.bestForNavigation, // alta precisão
+      accuracy: LocationAccuracy.bestForNavigation, 
       distanceFilter: 0, // em metros (0 = sempre que mudar)
       timeLimit: const Duration(seconds: 10),
     );
